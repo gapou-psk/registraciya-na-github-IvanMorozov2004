@@ -1,0 +1,15 @@
+Задание 5
+SELECT * FROM project_simple.project;
+SELECT COUNT(1) FROM project_simple.project;
+
+Задание 6
+SELECT * FROM store_simple.store;
+SELECT category, COUNT(product_name) FROM store_simple.store GROUP BY category;
+
+Задание 7
+SELECT * FROM store_simple.store;
+SELECT category, SUM(price*sold_num) result FROM store_simple.store GROUP BY category ORDER BY result DESC LIMIT 5;
+
+Задание 8
+SELECT * FROM project_simple.project;
+SELECT COUNT(project_name), SUM(budget), AVG(DATEDIFF(project_finish, project_start)) FROM project_simple.project;
