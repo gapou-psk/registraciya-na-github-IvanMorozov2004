@@ -1,1 +1,31 @@
 Вариант 6
+
+CREATE database Gostinica;
+use Gostinica;
+CREATE TABLE Category(
+id_cadegory int NOT NULL PRIMARY KEY,
+name NVARCHAR(50) NOT NULL,
+id_place int NOT NULL);
+CREATE TABLE Personal (
+id_worker int NOT NULL,
+users NVARCHAR(50) NOT NULL PRIMARY KEY,
+post NVARCHAR(50) NOT NULL,
+id_service int NOT NULL);
+CREATE TABLE Number(
+id_number int NOT NULL PRIMARY KEY,
+id_cadegory int NOT NULL,
+money NVARCHAR(50) NOT NULL,
+id_place int NOT NULL);
+CREATE TABLE client(
+id_client int NOT NULL PRIMARY KEY, 
+users NVARCHAR(50) NOT NULL,
+data_rojdenia DATE NOT NULL,
+address NVARCHAR(50) NOT NULL,
+num_pass NVARCHAR(50) NOT NULL);
+CREATE TABLE work(
+id_opiration int NOT NULL,
+id_number int NOT NULL,
+id_client int NOT NULL,
+date_in DATE NOT NULL,
+date_from DATE NOT NULL,
+price int NOT NULL);
